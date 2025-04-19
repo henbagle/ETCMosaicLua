@@ -14,8 +14,12 @@ function get_current_location() end
 
 ---Gets the specified timeline by id
 ---@return Timeline
----@param id integer The id of the timeline
+---@param id number? The id of the timeline
 function get_timeline(id) end
+
+---Gets the current controller
+---@return Controller
+function get_current_controller() end
 
 
 ---Gets the specified timeline by id
