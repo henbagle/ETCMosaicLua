@@ -20,14 +20,32 @@ local BPS = {
     RAMP_OFF = 9,
 }
 
+---@alias BPSState
+---| 0 RELEASED
+---| 1 PRESSED
+---| 2 HELD
+---| 3 REPEAT
+
+---@alias BPSEffect
+---| 0 OFF
+---| 1 ON
+---| 2 SLOW_FLASH
+---| 3 FAST_FLASH
+---| 4 DOUBLE_FLASH
+---| 5 BLINK
+---| 6 PULSE
+---| 7 SINGLE
+---| 8 RAMP_ON
+---| 9 RAMP_OFF
+
 ---Returns the state of the button
 ---@param buttonNumber integer
----@return integer
+---@return BPSState
 function BPS:get_state(buttonNumber) end
 
 ---Set the effect and intensity of a BPS button LED
 ---@param button integer
----@param effect integer
+---@param effect BPSEffect
 ---@param intensity? integer
 ---@param fade? number
 function BPS:set_led(button, effect, intensity, fade) end
