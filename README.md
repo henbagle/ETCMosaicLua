@@ -1,7 +1,4 @@
-# Lua Language Server Addon Template
-This is a template for an [addon](https://github.com/LuaLS/lua-language-server/wiki/Addons) that can be used by the [Lua Language Server](https://github.com/LuaLS/lua-language-server).
+# ETC Mosaic Lua Language Server Addon
+This is an addon for the [Lua Language Server](https://luals.github.io/wiki/addons/) for the [ETC Mosaic](https://www.etcconnect.com/Products/Architectural-Systems/Mosaic/) architectural lighting system (formerly Pharos Architectural Controls). This addon will provide API definitions and type hints when writing custom trigger action script and IO modules in VSCode, which can then be copied into Mosaic Designer 2.
 
-## Publishing to Addon Manager
-The [addon manager](https://github.com/LuaLS/lua-language-server/discussions/1965) for VS Code allows users to easily install and manage their addons. The addons are pulled from [LLS-Addons](https://github.com/LuaLS/LLS-Addons).
-
-To add your addon to the addon manager, please read the [README for LLS-Addons](https://github.com/LuaLS/LLS-Addons#readme).
+This addon has been developed for [v10 of the ETC Mosaic Lua API](https://etc-mosaic-controller-api.readthedocs.io/en/v10/lua-api/).
