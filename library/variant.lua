@@ -11,12 +11,12 @@
 local Variant = {}
 
 ---@return boolean
-function Variant.is_integer() end
+function Variant:is_integer() end
 
 ---@return boolean
-function Variant.is_string() end
+function Variant:is_string() end
 
 ---@return boolean
-function Variant.is_ip_address() end
+function Variant:is_ip_address() end
 
 return Variant
