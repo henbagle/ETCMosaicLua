@@ -1,7 +1,21 @@
 ---@meta
-
----@enum SourceBus
-local SourceBus = {
+---@class Timeline
+---@field name string Timeline name
+---@field group string Timeline group name
+---@field length integer Timeline length, in milliseconds
+---@field source_bus SourceBus
+---@field timecode_format string Incoming timecode format on source bus
+---@field audio_band AudioBand
+---@field audio_channel AudioChannel
+---@field audio_peak boolean The Peak setting of the timeline, if set to an audio time source
+---@field time_offset integer Time offset in milliseconds
+---@field state TimelineState Timeline state
+---@field onstage boolean Whether the timeline is affecting output of any fixtures
+---@field position integer Position in milliseconds
+---@field priority TimelinePriority
+---@field custom_properties table Table keys and values correspond to custom property names and values
+local Timeline = {
+    -- SourceBus
     DEFAULT = 0,
     TCODE_1 = 1,
     TCODE_2 = 2,
@@ -13,61 +27,74 @@ local SourceBus = {
     AUDIO_2 = 8,
     AUDIO_3 = 9,
     AUDIO_4 = 10,
-}
 
----@enum AudioBand
-local AudioBand = {
+    -- AudioBand
     VOLUME = 0,
-}
 
----@enum AudioChannel
-local AudioChannel = {
+    -- AudioChannel
     LEFT = 0,
     RIGHT = 1,
     COMBINED = 2,
-}
 
----@enum TimelineState
-local TimelineState = {
+    -- TimelineState
     NONE = 0, -- The timeline has never been run
     RUNNING = 1, -- The timeline is running
     PAUSED = 2, -- The timeline has been paused by another action
     HOLDING_AT_END = 3, -- The timeline has reached the end, and is holding
     RELEASED = 4, -- The timeline has been run and has now been released
-}
 
----@enum TimelinePriority
-local TimelinePriority = {
+    -- TimelinePriority
     HIGH_PRIORITY = 0,
     ABOVE_NORMAL_PRIORITY = 1,
     NORMAL_PRIORITY = 2,
     BELOW_NORMAL_PRIORITY = 3,
     LOW_PRIORITY = 4,
-}
 
----@enum TimelineReference
-local TimelineReference = {
+    -- TimelineReference
     RELATIVE = 0, -- The timeline position value is relative
     ABSOLUTE = 1, -- The timeline position value is absolute
     FLAG = 2, -- The timeline position value is obtained from a timeline flag
 }
 
----@class Timeline
----@field name string Timeline name
----@field group string Timeline group name
----@field length integer Timeline length, in milliseconds
----@field source_bus SourceBus
----@field timecode_format string Incoming timecode format on source bus
----@field audio_band AudioBand
----@field audio_channel AudioChannel
----@field audio_peak boolean The Peak setting of the timeline, if set to an audio time source
----@field time_offset integer Time offset in milliseconds
----@field state TimelineState
----@field onstage boolean Whether the timeline is affecting output of any fixtures
----@field position integer Position in milliseconds
----@field priority TimelinePriority
----@field custom_properties table Table keys and values correspond to custom property names and values
-local Timeline = {}
+---@alias SourceBus
+---| 0 DEFAULT
+---| 1 TCODE_1
+---| 2 TCODE_2
+---| 3 TCODE_3
+---| 4 TCODE_4
+---| 5 TCODE_5
+---| 6 TCODE_6
+---| 7 AUDIO_1
+---| 8 AUDIO_2
+---| 9 AUDIO_3
+---| 10 AUDIO_4
+
+---@alias AudioBand
+---| 0 VOLUME
+
+---@alias AudioChannel
+---| 0 LEFT
+---| 1 RIGHT
+---| 2 COMBINED
+
+---@alias TimelineState
+---| 0 NONE
+---| 1 RUNNING
+---| 2 PAUSED
+---| 3 HOLDING_AT_END
+---| 4 RELEASED
+
+---@alias TimelinePriority
+---| 0 HIGH_PRIORITY
+---| 1 ABOVE_NORMAL_PRIORITY
+---| 2 NORMAL_PRIORITY
+---| 3 BELOW_NORMAL_PRIORITY
+---| 4 LOW_PRIORITY
+
+---@alias TimelineReference
+---| 0 RELATIVE
+---| 1 ABSOLUTE
+---| 2 FLAG
 
 ---Starts the timeline
 function Timeline:start() end

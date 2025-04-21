@@ -1,0 +1,18 @@
+---@meta
+
+HASH_MD4 = 0
+HASH_MD5 = 1
+HASH_SHA1 = 2
+HASH_SHA224 = 3
+HASH_SHA256 = 4
+HASH_SHA384 = 5
+HASH_SHA512 = 6
+
+---@alias HashMethod
+---| 0 HASH_MD4
+---| 1 HASH_MD5
+---| 2 HASH_SHA1
+---| 3 HASH_SHA224
+---| 4 HASH_SHA256
+---| 5 HASH_SHA384
+---| 6 HASH_SHA512

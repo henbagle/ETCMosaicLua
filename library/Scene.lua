@@ -1,19 +1,20 @@
 ---@meta
-
----@enum SceneState
-local SceneState = {
-    NONE = 0,
-    STARTED = 1,
-    RELEASED = 2,
-}
-
 ---@class Scene
 ---@field name string Scene name
 ---@field group string Scene group name
 ---@field state SceneState Scene state
 ---@field onstage boolean Whether the scene is affecting output of any fixtures
 ---@field custom_properties table A table of custom property keys and values
-local Scene = {}
+local Scene = {
+    NONE = 0,
+    STARTED = 1,
+    RELEASED = 2,
+}
+
+---@alias SceneState
+---| 0 NONE
+---| 1 STARTED
+---| 2 RELEASED
 
 ---Starts the scene.
 function Scene:start() end

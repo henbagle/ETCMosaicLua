@@ -33,15 +33,6 @@ function get_trigger_variable(idx) end
 ---@param ... any Variables to be passed to the trigger
 function enqueue_trigger(num, ...) end
 
-
----@alias LogLevel
----| '"LOG_DEBUG"'
----| '"LOG_TERSE"'
----| '"LOG_NORMAL"'
----| '"LOG_EXTENDED"'
----| '"LOG_VERBOSE"'
----| '"LOG_CRITICAL"'
-
 ---@param level LogLevel
 ---@param message string
 function log(level, message) end

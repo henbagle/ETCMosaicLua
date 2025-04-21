@@ -1,6 +1,15 @@
 ---@meta
 ---@class TouchDevice
-local TouchDevice = {}
+local TouchDevice = {
+    SNAP = 0,
+    PAN_LEFT = 1,
+    PAN_RIGHT = 2
+}
+
+---@alias InterfacePageTransition
+---| 0 SNAP
+---| 1 PAN_LEFT
+---| 2 PAN_RIGHT
 
 ---Set the value on a Touch Slider or Colour Picker
 ---@param name string The key of the touch control
@@ -34,13 +43,6 @@ function TouchDevice:set_touch_button_pressed(name, pressed) end
 ---@param name string The key of the touch button
 ---@return boolean Whether the button is pressed (true) or released (false)
 function TouchDevice:is_touch_button_pressed(name) end
-
----@enum InterfacePageTransition
-local InterfacePageTransition = {
-    SNAP = 0,
-    PAN_LEFT = 1,
-    PAN_RIGHT = 2
-}
 
 ---Changes the current page
 ---@param number integer Touch interface page to change to
