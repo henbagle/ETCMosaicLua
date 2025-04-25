@@ -16,19 +16,28 @@ TPS = 116
 TPS5 = 117
 TPS8 = 118
 
----@alias RemoteDeviceType
+---@alias RIOType
 ---| 101 RIO80
 ---| 102 RIO44
 ---| 103 RIO08
----| 104 BPS
 ---| 105 RIOA
 ---| 106 RIOD
----| 107 BPI
----| 108 EXT
----| 109 EDN20
----| 110 EDN10
 ---| 114 RIOG4
 ---| 115 RIOD4
+
+---@alias TPSType
 ---| 116 TPS
 ---| 117 TPS5
 ---| 118 TPS8
+
+---@alias EDNType
+---| 109 EDN20
+---| 110 EDN10
+
+---@alias RemoteDeviceType
+---| RIOType
+---| 104 BPS
+---| 107 BPI
+---| 108 EXT
+---| EDNType
+---| TPSType

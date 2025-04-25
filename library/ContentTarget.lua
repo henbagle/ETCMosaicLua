@@ -1,10 +1,29 @@
 ---@meta
+
+PRIMARY = 1
+SECONDARY = 2
+TARGET_3 = 3
+TARGET_4 = 4
+TARGET_5 = 5
+TARGET_6 = 6
+TARGET_7 = 7
+TARGET_8 = 8
+
+---@alias ContentTargetType
+---| 1 PRIMARY
+---| 2 SECONDARY
+---| 3 TARGET_3
+---| 4 TARGET_4
+---| 5 TARGET_5
+---| 6 TARGET_6
+---| 7 TARGET_7
+---| 8 TARGET_8
+
 ---@class ContentTarget Only supported on Atlas and Atlas Pro.
 ---@field master_intensity_level Variant
 ---@field rotation_offset number Atlas Pro only
 ---@field x_position_offset number Atlas Pro only
 ---@field y_position_offset number Atlas Pro only
-
 local ContentTarget = {}
 
 ---Masters the intensity of the content target
