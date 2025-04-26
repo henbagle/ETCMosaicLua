@@ -343,3 +343,5 @@ function enable_output(protocol) end
 ---@param bus SourceBus The bus to enable or disable
 ---@param enabled? boolean Whether to enable the bus. Defaults to true.
 function set_timecode_bus_enabled(bus, enabled) end
+
+return _G

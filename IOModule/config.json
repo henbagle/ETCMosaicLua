@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/LLS-Addons/main/schemas/addon_config.schema.json",
+  "name": "etc-mosaic-iomodule",
+  "settings": {
+    "Lua.runtime.builtin": {
+      "package": true,
+      "string": true,
+      "utf8": true,
+      "table": true,
+      "math": true,
+      "io": true
+    },
+    "Lua.workspace.library": [
+      "../Controller/library/"
+    ]
+  }
+}
