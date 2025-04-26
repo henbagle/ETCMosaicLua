@@ -11,7 +11,7 @@
       "io": true
     },
     "Lua.workspace.library": [
-      "../Controller/library/"
+      "../"
     ]
   }
 }
