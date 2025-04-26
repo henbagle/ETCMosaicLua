@@ -7,7 +7,7 @@
 ---@field cleanup fun() -- Called just before when the project unloads
 ---@field broadcast_event fun(variables:integer[]) -- Broadcast receiver handler
 ---@field time_change fun() -- Called when the controller's time changes
-local instance = {}
+instance = {}
 
 ---Reads the value of a property from the instance
 ---@param key string Property name
