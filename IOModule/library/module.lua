@@ -11,4 +11,14 @@
 ---@field shared_table table Shared table for all instances of this module
 module = {}
 
+---Reads the value of a property from the module
+---@param key string Property name
+---@return any #Property value
+function module:property(key) end
+
+---Reads a property from the module
+---@param key string Property name
+---@return property #Property value
+function module:property_object(key) end
+
 return module

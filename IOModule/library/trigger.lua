@@ -6,7 +6,7 @@
 local trigger = {}
 
 ---Fires the trigger, optionally passing a value
----@param value any
+---@param value? any
 function trigger:fire(value) end
 
 return trigger

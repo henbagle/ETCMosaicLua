@@ -90,7 +90,7 @@ function UdpSocket:join_multicast_group_async(group_address, callback) end
 ---Leaves the specified multicast group. The operation will fail if the socket is not in BOUND_STATE
 ---@param group_address string Multicast group IP address in the form of a string
 ---@return boolean True if the operation was successful, false otherwise
-function UdpSocket:join_multicast_group(group_address) end
+function UdpSocket:leave_multicast_group(group_address) end
 
 ---Asynchronously leaves the specified multicast group. The operation will fail if the socket is not in BOUND_STATE
 ---This must be used when outside the UdpSocket's event handlers
