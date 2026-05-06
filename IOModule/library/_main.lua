@@ -8,13 +8,15 @@ iomodules = {
     Stopwatch = require("IOModule.library.Stopwatch"),
     Timer = require("IOModule.library.Timer"),
     Serial = require("IOModule.library.Serial"),
+    Stream = require("IOModule.library.Stream"),
     gpio = {
         AnalogInput = require("IOModule.library.gpio.AnalogInput"),
         DigitalInput = require("IOModule.library.gpio.DigitalInput"),
         DigitalOutput = require("IOModule.library.gpio.DigitalOutput"),
     },
     net = {
-        UdpSocket = require("IOModule.library.net.UdpSocket")
+        UdpSocket = require("IOModule.library.net.UdpSocket"),
+        TcpSocket = require("IOModule.library.net.TcpSocket")
     },
     http = {
 
